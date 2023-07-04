@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.ImgMapper">
+
+    <insert id="insertImg" parameterType="string">
+        INSERT INTO imgtable(base64)
+        VALUES(#{result})
+    </insert>
+
+    <select id="getimg" resultType="string">
+        select base64 from imgtable where id = 2
+    </select>
+
+
+</mapper>
